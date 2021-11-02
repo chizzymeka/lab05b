@@ -1,4 +1,4 @@
-name: Test Rational Project
+name: Build Rational Project
 
 on: [push]
 
@@ -14,5 +14,5 @@ jobs:
           with:
             java-version: '17'
             distribution: 'adopt'
-        - name: Test with Ant
-          run: ant test
+        - name: Build with Ant
+          run: ant -noinput -buildfile build.xml
